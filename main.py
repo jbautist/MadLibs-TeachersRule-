@@ -65,15 +65,11 @@ while seguir_jugando == 'S':
         print('\nERROR: has ingresado un carácter o número incorrecto. Por favor elige una historia del [1] al [9] o ingresa [10] para salir.')
         continue
 
-    # Bucle para comprobar que el usuario ingrese 's, n, S o N.
     while True:  
-        seguir_jugando = input('\n¿Quiere seguir jugando? [S/N] ')
-        if not seguir_jugando.isalpha():
-            print('\nError: has ingresado un caracter incorrecto.')
-        elif seguir_jugando.upper() == 'S' or seguir_jugando.upper() == 'N':
+        seguir_jugando = input('\n¿Quiere seguir jugando? [S/N] ').upper()
+        if seguir_jugando == 'S' or seguir_jugando == 'N':
             break
         else:
-            print('\nError: has ingresado una letra incorrecta.')
-
-    seguir_jugando = seguir_jugando.upper()
+            print('\nERROR: ha ingresado un carácter invalido.')
+            
     clearConsole()
